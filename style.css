@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "Unna", serif;
+    font-weight: 700;
+}
+.background{
+    background-image: url(assets/bluuredCity.avif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+}
+#heading{
+    font-size: 2.5rem;
+    color: #F5F5F5;
+    text-align: center;
+    padding-top: 1rem;
+    text-shadow: 2px 2px 5px rgb(67, 67, 187);
+}
+.main{
+
+    height: 80vh;
+    width: auto;
+    margin: 1rem 2rem 2rem 2rem;
+    background-color: rgba(89, 61, 108,0.7);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    height: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: transparent;
+    color: #f5f5f5;
+    box-shadow: 1.5px 1.5px 5px rgb(48, 13, 70) ;
+}
+.nav button{
+    all: unset;
+    cursor: pointer;
+    margin: 0.4rem;
+    padding: 5px;
+    color: #f5f5f5;
+    opacity: 0.7;
+    background-color: transparent;
+}
+.content{
+    height: 20rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 5px;
+    overflow-y: auto;
+}
+.hero{
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.hero h1{
+    color: #f5f5f5;
+}
+.hero-buttons{
+    margin-top: 4rem;
+}
+.hero-buttons button{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    all: unset;
+    cursor: pointer;
+    border-radius: 15px;
+    margin: 0.4rem;
+    padding: 5px;
+}
+.hero #one{
+    background-color: rgb(89, 61, 108);
+    color: #f5f5f5;
+    transition: transform 0.2s ease ;
+    border: 2px solid #f5f5f5;
+}
+.hero #one:hover{
+    transform: scale(1.2);
+}
+.hero #two{
+    background-color: transparent;
+    color: #f5f5f5;
+    border: 2px solid #f5f5f5;
+    transition:background-color 0.2s ease, transform 0.2s ease;
+}
+.hero #two:hover{
+    background-color: rgb(89, 61, 108);
+    transform: scale(1.2);
+    color: #f5f5f5;
+}
+h1, .content h2{
+    font-style: italic;
+}
+.nav button:hover{
+    opacity: 1;
+}
+.about, .features, .faq{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #f5f5f5;
+    width: 90%;
+    height: 90%;
+    line-height: 1.6;
+    border-radius: 20px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+h3, strong{
+    color: #F0E6FF;
+}
+li{
+    color: #C7E8F3;
+}
+p{
+    color: #C7E8F3;
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.hidden{
+    display: none !important;
+}
+.home{
+    overflow: hidden;
+}
+#home{
+    opacity: 1;
+}
+@media (max-width: 600px){
+    .main{
+        width: 95%;
+        margin: 0.5rem;
+    }
+    .hero h1{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .about, .features, .faq{
+        padding: 1rem;
+        align-items: center;
+    }
+    .nav button{
+        margin: 0.2rem;
+        padding: 3px;
+    }
+}
